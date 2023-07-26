@@ -22,11 +22,12 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
 const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 
 export default function Page() {
+   
   return (
     <>
       <div className='mx-auto flex w-full flex-col flex-wrap items-center md:flex-row  lg:w-4/5'>
-        <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-4/5 md:text-left'>
-          <p className='w-full uppercase'>Next + React Three Fiber</p>
+        <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-3/5 md:text-left'>
+          <p className='w-full uppercase'>LOGO PAGE</p>
           <h1 className='my-4 text-5xl font-bold leading-tight'>Meet Kirik: Author, Admin. 
           </h1>
           <p className='leading-normal text-2xl mb-8'>CS grad and gamer!<br></br>
@@ -46,9 +47,9 @@ Explore landmarks, fetch items, get rewards.
         </div>
       </div>
 
-      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center' style={{ width: '30%', right: '5%', maxWidth: '800px' }}>
-        <Logo scale={1/3} position={[0, 0, -1]} rotation={[0.0, 0, 0]}/>
-        <Blob />
+      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center' style={{ width: '40%', right: '5%', maxWidth: '800px' }}>
+        <Logo scale={1/3} position={[0, 0, -1]} rotation={[0.0, 0, 0]} route ="/" />
+       
         <Common />
       </View>
     </>

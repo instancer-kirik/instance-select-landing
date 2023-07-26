@@ -6,7 +6,7 @@ import * as THREE from 'three'
 import { useMemo, useRef, useState } from 'react'
 import { Line, useCursor, MeshDistortMaterial, useTexture } from '@react-three/drei'
 import { useRouter } from 'next/navigation'
-
+import Link from 'next/link';
 
 export const CustomModel = ({ url, color, scale, position, rotation }) => {
   const model = useRef();
@@ -54,10 +54,10 @@ export const Blob = ({ route = '/', ...props }) => {
   )
 }
 
-export const Logo = ({ route = '/blob', ...props }) => {
+export const Logo = ({ route = '/logo', ...props }) => {
   const mesh = useRef(null)
   const router = useRouter()
-
+  
   const [hovered, hover] = useState(false)
   const texture = useTexture('/logo.png'); // Replace 'path/to/logo.png' with the actual path to your logo image
   //texture.encoding = THREE.sRGBEncoding; // Set the texture encoding for correct color representation
@@ -82,6 +82,7 @@ export const Logo = ({ route = '/blob', ...props }) => {
         <meshPhysicalMaterial roughness={0} map={texture} transparent={true} alphaTest={0.5} color={hovered ? 'red' : '#FFFFFF'}/> 
       </mesh>
     </group>
+    
   )
 }
 //\\color={hovered ? 'hotpink' : '#1fb2f5'} />
@@ -117,5 +118,21 @@ export function OilBarrel(props, color) {
   //   //   node.material = new THREE.MeshBasicMaterial({ color: 0x077820 });
   //   // }
   // });
+/* <
+
+    <Link href={router.pathname === '/logo' ? '/' : '/logo'}> {/* Wrap Logo with Link }
+    
+    <mesh onClick={() => router.push(route)} onPointerOver={() => hover(true)} onPointerOut={() => hover(false)}>
+    <planeGeometry args={[10, 5]} />
+    <meshPhysicalMaterial roughness={0} map={texture} transparent={true} alphaTest={0.5} color={hovered ? 'red' : '#FFFFFF'} /> 
+  </mesh>
+
+</Link>
+ */
+
+
+
+
+
   return <primitive object={scene} {...props} />
 }

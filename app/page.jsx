@@ -49,10 +49,11 @@ export default function Page() {//Next + React Three Fiber
         <div className='w-full text-center md:w-3/5'>
           <View className='flex h-96 w-full flex-col items-center justify-center'>
             <Suspense fallback={null}>
-              <Logo route='/blob' scale={0.6} position={[0, 0, 0]} />
+              <Logo route='/logo' scale={0.6} position={[0, 0, 0]} />
               <Common />
             </Suspense>
           </View>
+          <p className='mb-8 text-2xl leading-normal'>^clickable^</p>
         </div>
       </div>
 
@@ -107,20 +108,11 @@ export default function Page() {//Next + React Three Fiber
             </p>
         </div>
         {/* third row */}
-        <div className='relative my-12 h-64 w-full py-6 sm:w-1/2 md:mb-40' >
-          <View orbit className='relative h-full sm:h-64 sm:w-full' rotation={[0, Math.PI / 2, 0]}  >
-            <Suspense fallback={null}>
-              <pointLight position={[1, 0, 2]} intensity={2} /> 
-              <Duck  scale={2} position={[-0.5,0,0]} rotation={[0.0, -0.5, 0]} />
-              <Common color={'#aec2f9'} />
-            </Suspense>
-          </View>
-          
-        </div>
+        
         <div className='w-full p-6 sm:w-1/2'>
           <h2 className='mb-3 text-3xl font-bold leading-none text-gray-800'>A:</h2>
           <p className='mb-8 text-gray-600'>
-            Currently, 
+            Placeholder for email intake form. <br></br> 
             </p>
         </div>
       </div>
