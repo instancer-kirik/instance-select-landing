@@ -9,7 +9,7 @@ import { forwardRef, useImperativeHandle, useRef } from 'react'
 const ShaderImpl = shaderMaterial(
   {
     time: 0,
-    color: new THREE.Color(0.05, 0.0, 0.025),
+    color: new THREE.Color(0.05, 99.0, 0.025),
   },
   vertex,
   fragment,
