@@ -39,7 +39,7 @@ Explore landmarks, fetch items, get rewards.
           <br></br>
           
           </p>
-          <p className='mb-8 text-2xl leading-normal'>An underfunded, but motivated endeavor. This shall be the means that gets me out of my mom's house and into a space for creation.<br></br>
+          <p className='mb-8 text-2xl leading-normal'>An underfunded, but motivated endeavor. This shall be the means that gets me out of my moms house and into a space for creation.<br></br>
           Seeking $$ and/or employment. </p>
           <h2 className='my-4 text-3xl font-bold leading-tight'>Seek with advantage. instance.select.</h2>
           
