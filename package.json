@@ -14,7 +14,8 @@
     "dev": "next dev",
     "build": "next build",
     "analyze": "ANALYZE=true next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^8.2.0",
